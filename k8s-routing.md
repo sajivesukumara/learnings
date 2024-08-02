@@ -42,9 +42,52 @@ This is how a request reach its target application:
 6) The Istio IngressGateway pod routes the request to the corresponding application service based on the routing information.
 7) The application service routes the request to the corresponding application pod.
 
-![k8s-service-flow](https://github.com/user-attachments/assets/a39ebfa3-a700-4a61-abf6-ecaea080d9d9)
 
+![k8s-service-flow (1)](https://github.com/user-attachments/assets/06f12321-21e7-4785-b9f7-1ed764e57eb2)
+
+
+Every Gateway is backed by a service of type LoadBalancer. The external load balancer IP and ports for this service are used to access the gateway. 
+Kubernetes services of type LoadBalancer are supported by default in clusters running on most cloud platforms
+
+```
+DNS -> Load Balancer -> API gateway -> Backend service
+```
+**Load Balancer** : is the servie attached with the Gateway using select name
+
+**API Gateway**: has rules defined in the VS for routing traffic to relevent backend service/pod.
+
+**Backend Service**: Receives the traffic from the istio-gateway (image: proxy) pod and sends to application pod.
+
+
+#### Create a Gateway with selector defined with unique name that would be used in the LoadBalancer
+```
+spec:
+  selector:
+      name: my-ingress-gateway
+      service.istio.io/**canonical-name: my-ingress-gateway**
+```
+
+##### Define a service of type LoadBalancer and selector with "istio:devel-platform-gateway"
+```  
+  ports:
+  - name: https
+    nodePort: 32143
+    port: 443
+    protocol: TCP
+    targetPort: 443
+  selector:
+    app: devel-platform-gateway
+    **istio: my-ingress-gateway**
+  sessionAffinity: None
+  type: **LoadBalancer**
+status:
+  **loadBalancer**:
+    ingress:
+    - ip: 10.10.10.101     // An external IP can defined in DNS with a FQDN
+    - 
+```
 
 ### Istio Proxy Pods in each of the application pods also handle the ingress traffic
 
 ![image](https://github.com/user-attachments/assets/f1a800bf-8f0b-4935-b614-65a644be0bd3)
+
