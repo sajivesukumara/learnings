@@ -48,3 +48,16 @@ This gives you:
 You may still get conflicts, but they will be genuine conflicts (between p/q/r and a/b+c/d+e/f), and not conflicts caused by b/c conflicting with b+c, etc.
 
  
+# GitBash - Adding directory to newly created blank github repo 
+
+1. From the GIT UI create a new repository
+2. From the GitBash cmd line go to the project's root directory and run the following commmands
+```
+  git init
+  git config --global core.autocrlf false
+  git remote add origin https://github.com/sajivesukumara/RentBike.git
+  git remote set-url origin https://<TOKEN>@github.com/sajivesukumara/RentBike.git
+  git add .
+  git commit -m "First commit"
+  git push -u origin main
+```
