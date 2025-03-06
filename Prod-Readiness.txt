@@ -1,0 +1,55 @@
+
+Right Design
+Right programming language
+Right Practices
+
+
+Stability and Reliability: 
+  develop, deploy, introduce, and deprecate microservices; protect against dependency failures
+  Standardized development cycle (CI/CD and automated builds)
+  Stable Deployment
+  Identify dependencies
+  Identify fall back mechanisms
+
+  Strong deployment pipelines (Sandbox, Intg Tests, Staging, Production)
+  
+  Reliable deployment process
+  Reliable routing and discovery, ie., communication and interaction between microservices is stable and reliable.
+
+
+
+Scalability and Performance: 
+  Microservice's qualitative (req per second/queries per second) and 
+  quantitative growth scales (req/queries/events)
+  Scale up and Scale down
+  Traffic can be re-routed in case of failures.
+  Efficient use of resources (Memory & CPU)
+  DB Connections
+  Events queuing 
+  Dependency scaling - Microservice's dependencies should also scale
+
+
+Fault Tolerance and Failure Preparedness: 
+  ensure availability by actively pushing microservices to fail in real time
+  Identify failure scenarios and remediation plan/mitigation strategy
+  Dealing with outages and incidents (regardless of severity) should be standardized across the teams.
+
+
+Monitoring: 
+  Logging - per standards defined across the org.
+  Key metrics are identified and monitored at the host, infrastructure, and microservice levels.
+     API response,latency,errors, 
+  appropriate logging that accurately reflects the past states of the microservice.
+  clear, well-defined, and standardized on-call procedure in place
+
+Documentation and Understanding: 
+  mitigate tradeoffs that come with microservice adoption, including organizational sprawl and technical debt
+
+
+
+Enviroment
+
+Sandbox => Staging => Production
+
+
+
