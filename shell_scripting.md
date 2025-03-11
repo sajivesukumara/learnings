@@ -44,6 +44,14 @@ export PS4='+($(date +"%b %d %H:%M:%S") ${BASH_SOURCE}:${LINENO}): ${FUNCNAME[0]
 </pre>
 
 
+# Use shell debug output
+
+set -v (set -o verbose) : print everything before any is applied
+set -x (set -o xtrace)
+
+
+from commandline: bash -vx ./myscript
+from shebang (OS dependant): #!/bin/bash -vx
 
 ## Creating file using CAT and EOF
 
@@ -181,8 +189,10 @@ echo "${array[2]^^}"
 ```
 If the parameter PARAMETER is unset (never was defined) or null (empty), this one expands to WORD, 
 otherwise it expands to the value of PARAMETER, as if it just was ${PARAMETER}. 
+
 If you omit the : (colon), like shown in the second form, the default value is only used when the 
 parameter was unset, not when it was empty.
+
 
 ${PARAMETER:-WORD}
 
@@ -197,17 +207,22 @@ ${PARAMETER=WORD}
 ```
 
 
+## Control characters in file - Windows (\r\n) to Linux (\n)
+(^M is a symbolic representation of the CR carriage return character!)
 
-
-
-
-
-
-
-
-
+**To display CRs (these are only a few examples)**
+<pre>
+in VI/VIM: :set list
+with cat(1): cat -v FILE
+</pre>
+**To eliminate them (only a few examples)**
+<pre>
+blindly with tr(1): tr -d '\r' <FILE >FILE.new
+controlled with recode(1): recode MSDOS..latin1 FILE
+controlled with dos2unix(1): dos2unix FILE
+</pre>
 
 
 # Reference List 
 
-[]([http://web.archive.org/web/20230404084543/https://wiki.bash-hackers.org/syntax/pe#use_a_default_value](http://web.archive.org/web/20230404084543/https://wiki.bash-hackers.org/syntax/pe))
+[Scripting Tips](http://web.archive.org/web/20230404084543/https://wiki.bash-hackers.org/syntax/pe)
