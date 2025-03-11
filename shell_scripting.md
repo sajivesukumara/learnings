@@ -138,3 +138,76 @@ vault kv put storagecentral/app/atlas-onprem-backup-manager/postgres username=at
 vault kv put storagecentral/app/atlas-reporting/postgres username=atlas_reporting password=hpinvent
 EOF
 ```
+
+## Case modification
+These expansion operators modify the case of the letters in the expanded text.
+```
+${PARAMETER^}   - Change first character to uppercase
+${PARAMETER^^}  - Change all characters to uppercase
+${PARAMETER,}   - Change firt characters to lowercase
+${PARAMETER,,}  - Change all characters to lowercase
+${PARAMETER~}   - Reverses the case of first letter of words in the variable 
+${PARAMETER~~}  -  ~~ reverses case for all.
+```
+The ^ operator modifies the first character to uppercase, 
+the , operator to lowercase. 
+When using the double-form (^^ and ,,), all characters are converted.
+
+**Example** rename all .dat files to uppercase
+```
+for file in *.dat; do
+  mv "$file" "${file^^}"
+done
+```
+
+```
+array=(This is some Text)
+
+echo "${array[@],}"
+⇒ this is some text
+echo "${array[@],,}"
+⇒ this is some text
+echo "${array[@]^}"
+⇒ This Is Some Text
+echo "${array[@]^^}"
+⇒ THIS IS SOME TEXT
+echo "${array[2]^^}"
+⇒ SOME
+```
+
+
+## Default value use and assignment
+
+```
+If the parameter PARAMETER is unset (never was defined) or null (empty), this one expands to WORD, 
+otherwise it expands to the value of PARAMETER, as if it just was ${PARAMETER}. 
+If you omit the : (colon), like shown in the second form, the default value is only used when the 
+parameter was unset, not when it was empty.
+
+${PARAMETER:-WORD}
+
+${PARAMETER-WORD}
+```
+
+
+```
+${PARAMETER:=WORD}
+
+${PARAMETER=WORD}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Reference List 
+
+[]([http://web.archive.org/web/20230404084543/https://wiki.bash-hackers.org/syntax/pe#use_a_default_value](http://web.archive.org/web/20230404084543/https://wiki.bash-hackers.org/syntax/pe))
