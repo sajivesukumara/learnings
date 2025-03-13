@@ -6,6 +6,15 @@ Path : grails-websocket/app/src/main/java/org/echoserver
 Files: EchoServer.java EchoServerHandler.java
 </pre>
 
+```
+cd $HOME/groovy-projects
+git clone  git@github.com:sajivekumar/learnings.git
+cd learnings/websocket-stomp/grails-websocket/echoserver
+gradle build
+gradle run 
+```
+
+
 ## ChatServer - broadcast messages
 <pre>
 Path : grails-websocket/app/src/main/java/org/chatserver
@@ -13,8 +22,8 @@ Path : grails-websocket/app/src/main/java/org/chatserver
 
 ```
 cd $HOME/groovy-projects
-git clone  git@github.com:sajivekumar/try-me-java.git
-cd try-me-java/grails-websocket/chatserver
+git clone  git@github.com:sajivekumar/learnings.git
+cd learnings/websocket-stomp/grails-websocket/chatserver
 gradle build
 gradle run 
 ```
