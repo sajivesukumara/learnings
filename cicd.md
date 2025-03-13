@@ -23,3 +23,7 @@ Continuous integration and continuous delivery help in improving and enhancing t
 1.2 Build pipeline
 
 ![image](https://github.com/sajivesukumara/learnings/assets/10908960/326635bc-9dda-4490-9265-9bd2bcf414fa)
+
+
+![image](https://github.com/user-attachments/assets/2d10b4d2-0412-4f49-8815-a8511c126cde)
+

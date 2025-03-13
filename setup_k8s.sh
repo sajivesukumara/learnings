@@ -186,8 +186,8 @@ function _system_setup() {
   # HOST_IP=`ifconfig | awk '/inet 15/{print substr($2,1)}'`   -- for centos
   HOST_IP=`hostname -I  | awk '{print substr($1,1)}'`
   
-  PROXY_VAL=https://x.x.x.x:443
-  NO_PROXY="localhost,127.0.0.1,10.244.0.0/16,10.96.0.0/12,192.168.59.0/24,192.168.39.0/24,192.168.49.0/24,${HOST_IP}"
+  export PROXY_VAL=${HTTP_PROXY:-"https://x.x.x.x:443"}
+  export NO_PROXY="localhost,127.0.0.1,10.244.0.0/16,10.96.0.0/12,192.168.59.0/24,192.168.39.0/24,192.168.49.0/24,${HOST_IP}"
 
   echo "==> Setup proxy to user profile"
   # Add proxy information to .profile
@@ -454,7 +454,7 @@ function config_docker() {
 
   grep Proxy /etc/apt/apt.conf
   if [[ $? -eq 0 ]]; then
-    echo 'Acquire::http::Proxy "http://web-proxy.corp.hpecorp.net:8080";' >> /etc/apt/apt.conf
+    echo 'Acquire::http::Proxy "$PROXY_VAL";' >> /etc/apt/apt.conf
   fi
 
   wget -qO- https://get.docker.com/ | sh
