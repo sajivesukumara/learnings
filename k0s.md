@@ -71,4 +71,3 @@ Here's an overview of the k0s architecture and interaction:
 - **etcd**: The data store for Kubernetes, storing configuration data, state information, etc.
 - **Worker Nodes**: Contain the kubelet (manages containers) and kube-proxy (handles network routing).
 
-This is a basic overview of the k0s architecture. Let me know if you'd like more details or if something specific needs clarification!
