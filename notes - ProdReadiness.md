@@ -1,10 +1,11 @@
-
+<pre>
 Right Design
 Right programming language
 Right Practices
+</pre>
 
-
-Stability and Reliability: 
+### Stability and Reliability: 
+<pre>
   develop, deploy, introduce, and deprecate microservices; protect against dependency failures
   Standardized development cycle (CI/CD and automated builds)
   Stable Deployment
@@ -15,10 +16,11 @@ Stability and Reliability:
   
   Reliable deployment process
   Reliable routing and discovery, ie., communication and interaction between microservices is stable and reliable.
+</pre>
 
 
-
-Scalability and Performance: 
+### Scalability and Performance: 
+<pre>
   Microservice's qualitative (req per second/queries per second) and 
   quantitative growth scales (req/queries/events)
   Scale up and Scale down
@@ -27,29 +29,28 @@ Scalability and Performance:
   DB Connections
   Events queuing 
   Dependency scaling - Microservice's dependencies should also scale
+</pre>
 
-
-Fault Tolerance and Failure Preparedness: 
+### Fault Tolerance and Failure Preparedness: 
+<pre>
   ensure availability by actively pushing microservices to fail in real time
   Identify failure scenarios and remediation plan/mitigation strategy
   Dealing with outages and incidents (regardless of severity) should be standardized across the teams.
+</pre>
 
-
-Monitoring: 
+### Monitoring: 
+<pre>
   Logging - per standards defined across the org.
   Key metrics are identified and monitored at the host, infrastructure, and microservice levels.
      API response,latency,errors, 
   appropriate logging that accurately reflects the past states of the microservice.
   clear, well-defined, and standardized on-call procedure in place
+</pre>
 
-Documentation and Understanding: 
+### Documentation and Understanding: 
   mitigate tradeoffs that come with microservice adoption, including organizational sprawl and technical debt
 
 
-
-Enviroment
+### Enviroment
 
 Sandbox => Staging => Production
-
-
-
