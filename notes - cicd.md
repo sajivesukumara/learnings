@@ -17,7 +17,7 @@ Continuous integration and continuous delivery help in improving and enhancing t
 * Breaking this further to understand how each of the microservices will deliver into the QA/Staging clusters.
 
 
-![image](https://github.com/sajivesukumara/learnings/assets/10908960/35e3bc35-ae19-4a04-b9d1-3ca6ea21a280)
+![image](https://github.com/sajivesukumara/learnings/blob/main/img-CD_Workflow.png)
 
 
 1.2 Build pipeline
