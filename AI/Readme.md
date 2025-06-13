@@ -1,17 +1,16 @@
 # Top Open Source Software (OSS) Agentic AI Projects:
 
-•	[Autogpt](https://github.com/Significant-Gravitas/AutoGPT)
+•	[Autogpt](https://github.com/Significant-Gravitas/AutoGPT) is a powerful platform that allows you to create, deploy, and manage continuous AI agents that automate complex workflows.
 
 •	[Langchain](https://github.com/langchain-ai/langchain)
 
-•	[Autogen](https://github.com/microsoft/autogen) |  is a framework for creating multi-agent AI applications that can act autonomously or work alongside humans.
+•	[Autogen](https://github.com/microsoft/autogen) is a framework for creating multi-agent AI applications that can act autonomously or work alongside humans.
 
-•	[Haystack](https://github.com/deepset-ai/haystack) | Developers needing full control over NLP/RAG applications
+ •	[Haystack](https://github.com/deepset-ai/haystack) Developers needing full control over NLP/RAG applications
 
 •	[Crewai](https://github.com/crewAIInc/crewAI)
 
-•	[Flowise](https://github.com/FlowiseAI/Flowise)  | Non-developers, fast prototyping, building simple LLM agents
-
+•	[Flowise](https://github.com/FlowiseAI/Flowise) Non-developers, fast prototyping, building simple LLM agents
 
 •	[Continue](https://github.com/continuedev/continue) | enables developers to create, share, and use custom AI code assistants
 •	[Openhands](https://github.com/All-Hands-AI/OpenHands) | a platform for software development agents powered by AI.
@@ -68,18 +67,20 @@ Haystack isnt omniscient - it only knows what you teach it (via tables/files/mod
 
 
 
-| Feature        | **Flowise**                           | **Haystack**                                    | **CreawAI**                                 | **Autogen**                          | **LangGraph**                               |
-| -------------- | ------------------------------------- | ----------------------------------------------- | --------------------------------------------| -------------------------------------| ------------------------------------------- |
-| **Type**       | Visual LLM app builder                | RAG/QA Pipeline Framework                       | Multi-agent Orchestration                   | Multi-agent conversational framework | Statetful worktflow builder                 |
-| **Focus**      | No-code/low-code workflows for LLMs   | Developer-focused LLM pipelines and RAG systems | Autonomous multi-agent task execution       |
-| **Main Use**   | Drag-and-drop to create LLM workflows | Build robust, scalable LLM apps (e.g. RAG, QA)  | Agent orchestration for task-based teamwork |
-| **Built With** | Node.js                               | Python                                          | Python codebase (developer focused)         |
+| Feature        | **Flowise**                           | **Haystack**                                    | **CreawAI**                                 | **Autogen**                          | **LangGraph**                |
+| -------------- | ------------------------------------- | ----------------------------------------------- | --------------------------------------------| -------------------------------------| ---------------------------- |
+| **Type**       | Visual LLM app builder                | RAG/QA Pipeline Framework                       | Multi-agent Orchestration                   | Multi-agent conversational framework | Statetful worktflow builder  |
+| **Focus**      | No-code/low-code workflows for LLMs   | Developer-focused LLM pipelines and RAG systems | Autonomous multi-agent task execution       | framework                            | Statetful                    |
+| **Main Use**   | Drag-and-drop to create LLM workflows | Build robust, scalable LLM apps (e.g. RAG, QA)  | Agent orchestration for task-based teamwork | framework                            | Statetful                    |
+| **Built With** | Node.js                               | Python                                          | Python codebase (developer focused)         | framework                            | Statetful                    |
+| **Best For**   |    s                                  | Building search, retrieval and question-ans systems |                                         | framework                            | Statetful                    |
+| **Example**    |    s                                  | FAQ Chatbot: Answers customer questions by searching DB + PDF manuals. |                                             | framework                            | Statetful                    |
 
+ 
+ ###  Example use cases
 
-###  Example use cases
-
-| Use Case                                   | **Flowise**                    | **Haystack**          | **CrewAI**                                 |**CrewAI**                                 |
-| ------------------------------------------ | ------------------------------ | --------------------- | ------------------------------------------ | ------------------------------------------ |
-| Chatbot for documents (PDF's)              | ✅ Drag and drop nodes        |  ✅ Load docs-embed-retrieve-llm | Very easy to build | ⚠️ Requires custom work                    |
-| Build an AI customer service team          | ❌ Not suitable       | ❌ Not suitable       | ✅ Ideal (multiple agents: greeter, expert) |
+| Use Case                              | **Flowise**             | **Haystack**                     | **CrewAI**                                    |**CrewAI**               |
+| ------------------------------------- | ----------------------- | -------------------------------- | --------------------------------------------- | ----------------------- |
+| Chatbot for documents (PDF's)         | ✅ Drag and drop nodes |  ✅ Load docs-embed-retrieve-llm | Very easy to build | ⚠️ Requires custom work |                         |
+| Build an AI customer service team     | ❌ Not suitable        | ❌ Not suitable                  | ✅ Ideal (multiple agents: greeter, expert)  |                         |
 
