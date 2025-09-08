@@ -29,19 +29,20 @@
 
 ## ASCII Diagram
 
-=================== Cookie-based login (crumb required) ===================
+```
+================ Cookie-based login (crumb required) ================
 
 [User logs into Jenkins]
-|
+     |
 Browser stores JSESSIONID cookie
-|
+     |
 Evil.com sends hidden POST
-|
+     |
 Browser auto-sends cookie ---> [Jenkins]
-|
+     |
 Crumb missing!
-|
+     |
 [403 Forbidden ❌]
-
+```
 
 
